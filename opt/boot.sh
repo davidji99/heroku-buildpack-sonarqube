@@ -35,7 +35,7 @@ touch /app/sonarqube/logs/web.log
 tail -F /app/sonarqube/logs/ce.log /app/sonarqube/logs/es.log /app/sonarqube/logs/web.log &
 
 # increase limits for elasticsearch
-sudo sysctl -w vm.max_map_count=262144
+# sudo sysctl -w vm.max_map_count=262144
 
 exec /app/sonarqube/bin/linux-x86-64/sonar.sh console
 
